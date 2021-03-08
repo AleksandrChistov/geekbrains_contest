@@ -58,7 +58,7 @@ img {
 }
 
 .top .navbar-toggler_active .navbar-toggler__item:first-child {
-    transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-6px, 7px);
 }
 
 .top .navbar-toggler_active .navbar-toggler__item:last-child {
@@ -71,8 +71,8 @@ img {
 
 .top .navbar-toggler__item {
     display: block;
-    height: 4px;
     width: 30px;
+    height: 4px;
     margin-bottom: 4px;
     background-color: #2F3132;
     transition-property: all;
@@ -177,6 +177,11 @@ img {
     display: block;
 }
 
+.top__arrow svg {
+    width: 42px;
+    height: 22px;
+}
+
 .bluetooth {
     padding-top: 42px;
     padding-bottom: 18px;
@@ -252,40 +257,10 @@ img {
     margin-bottom: 28px;
 }
 
-.texture .carousel-control-next,
-.texture .carousel-control-prev {
-    top: auto;
-    bottom: -94px;
-    opacity: 1;
-}
-
-.texture .carousel-control-next {
-    justify-content: flex-start;
-}
-
-.texture .carousel-control-prev {
-    justify-content: flex-end;
-}
-
-.texture .carousel-control-prev-icon,
-.texture .carousel-control-next-icon {
-    background-image: url(img/icons/slider-texture-sprite.svg);
-    background-size: auto;
-    width: 32px;
-}
-
-.texture .carousel-control-prev-icon {
-    background-position: 9px;
-}
-
-.texture .carousel-control-next-icon {
-    background-position: -289px;
-}
-
 .texture .carousel-indicators {
     bottom: -95px;
     justify-content: space-between;
-    max-width: 324px;
+    max-width: 242px;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
@@ -293,7 +268,7 @@ img {
 }
 
 .texture .carousel-indicators [data-bs-target] {
-    background-image: url(img/icons/slider-texture-sprite.svg);
+    background-image: url(img/slider-texture-sprite.svg);
     background-repeat: no-repeat;
     border: 1px solid transparent;
     opacity: 1;
@@ -325,6 +300,36 @@ img {
 
 .texture .carousel-indicators [data-bs-slide-to="4"] {
     background-position: -247px center;
+}
+
+.texture__carousel-buttons {
+    width: 87%;
+    max-width: 326px;
+    position: absolute;
+    bottom: -79px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.texture .carousel-control-next,
+.texture .carousel-control-prev {
+    width: 32px;
+    opacity: 1;
+}
+
+.texture .carousel-control-prev-icon,
+.texture .carousel-control-next-icon {
+    background-image: url(img/slider-texture-sprite.svg);
+    background-size: auto;
+    width: 100%;
+}
+
+.texture .carousel-control-prev-icon {
+    background-position: 9px;
+}
+
+.texture .carousel-control-next-icon {
+    background-position: -289px;
 }
 
 .texture__carousel-heading {
@@ -438,12 +443,16 @@ img {
     background-color: #C4C4C4;
     padding-top: 23px;
     padding-bottom: 26px;
+    text-align: center;
 }
 
 .settings__apps img {
+    width: 324px;
+    max-width: 100%;
     padding-left: 29px;
     padding-right: 22px;
     margin-bottom: 20px;
+    box-sizing: content-box;
 }
 
 .settings__apps-text {
@@ -458,6 +467,11 @@ img {
     padding-top: 70px;
 }
 
+.comfort__design {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
 .comfort__heading {
     margin-bottom: 20px;
 }
@@ -469,8 +483,8 @@ img {
     text-align: center;
 }
 
-.comfort__design {
-    margin-bottom: 70px;
+.comfort__speed {
+    text-align: center;
 }
 
 .footer {
@@ -482,4 +496,321 @@ img {
     font-size: 7px;
     line-height: 8px;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .top {
+        padding-bottom: 80px;
+    }
+
+    .top__header {
+        padding-top: 54px;
+    }
+
+    .top .navbar-toggler {
+        top: 44px;
+        right: 48px;
+        padding: 10px;
+    }
+
+    .top .navbar-toggler__item {
+        width: 60px;
+        height: 8px;
+        margin-bottom: 8px;
+    }
+
+    .top .navbar-toggler_active .navbar-toggler__item:first-child {
+        transform: rotate(-45deg) translate(-13px, 14px);
+    }
+
+    .top .navbar-toggler_active .navbar-toggler__item:last-child {
+        transform: rotate(45deg) translate(-10px, -10px);
+    }
+
+    .top .navbar-brand {
+        width: 240px;
+        height: 72px;
+    }
+
+    .top__logo_dark,
+    .top__logo_white {
+        min-width: 100%;
+    }
+
+    .heading {
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .top__img {
+        height: 514px;
+        background-image: url(img/tablet/mx-master_1.png);
+        margin-top: 160px;
+        margin-bottom: 124px;
+    }
+
+    .top__text {
+        padding-left: 154px;
+        padding-right: 155px;
+        margin-bottom: 76px;
+    }
+
+    .top__arrow svg {
+        width: 57px;
+        height: 29px;
+    }
+
+    .top .navbar-nav {
+        margin-top: 124px;
+        margin-bottom: 141px;
+    }
+
+    .top .navbar-nav .nav-link {
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .top .navbar-nav .nav-link::after {
+        height: 4px;
+    }
+
+    .top .navbar-nav .nav-item {
+        margin-bottom: 59px;
+    }
+
+    .bluetooth {
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+
+    .bluetooth__icon {
+        width: 21px;
+        margin-bottom: 39px;
+    }
+
+    .bluetooth__heading {
+        margin-bottom: 30px;
+    }
+
+    .bluetooth__text {
+        padding-left: 77px;
+        padding-right: 77px;
+        margin-bottom: 76px;
+    }
+
+    .bluetooth__days {
+        font-size: 150px;
+        line-height: 176px;
+        margin-bottom: -79px;
+    }
+
+    .bluetooth__img {
+        padding-left: 39px;
+        padding-right: 19px;
+    }
+
+    .texture {
+        padding-bottom: 61px;
+    }
+
+    .texture__heading {
+        margin-bottom: 30px;
+    }
+
+    .texture__text {
+        padding-left: 77px;
+        padding-right: 77px;
+        margin-bottom: 50px;
+    }
+
+    .texture__advantages-item {
+        flex-basis: 300px;
+        min-height: 170px;
+        margin-right: 30px;
+    }
+
+    .texture__advantages {
+        margin-bottom: 50px;
+    }
+
+    .texture .carousel {
+        margin-bottom: 50px;
+    }
+
+    .texture__carousel-heading {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 80px;
+    }
+
+    .texture .carousel-indicators {
+        min-width: 321px;
+        bottom: -142px;
+    }
+
+    .texture .carousel-indicators [data-bs-target] {
+        height: 45px;
+        width: 45px;
+        border: none;
+        background-image: url(img/tablet/slider-texture-sprite.svg);
+    }
+
+    .texture .carousel-indicators [data-bs-slide-to="0"] {
+        background-position: -42px center;
+    }
+
+    .texture .carousel-indicators [data-bs-slide-to="1"] {
+        background-position: -112px center;
+    }
+
+    .texture .carousel-indicators [data-bs-slide-to="2"] {
+        background-position: -181px center;
+    }
+
+    .texture .carousel-indicators [data-bs-slide-to="3"] {
+        background-position: -251px center;
+    }
+
+    .texture .carousel-indicators [data-bs-slide-to="4"] {
+        background-position: -322px center;
+    }
+
+    .texture__carousel-buttons {
+        width: 70%;
+        bottom: -120px;
+        max-width: 424px;
+    }
+
+    .texture .carousel-control-prev-icon,
+    .texture .carousel-control-next-icon {
+        background-image: url(img/tablet/slider-texture-sprite.svg);
+    }
+
+    .texture .carousel-control-next-icon {
+        background-position: -383px;
+    }
+
+    .texture__carousel-text {
+        padding-left: 77px;
+        padding-right: 77px;
+    }
+
+    .flow {
+        padding-left: 64px;
+        padding-right: 65px;
+        padding-bottom: 498px;
+        background-image: url(img/tablet/high-resolution-jpg-mx-lifestyle-2346-1.jpg);
+    }
+
+    .flow__heading {
+        margin-bottom: 30px;
+    }
+
+    .flow__text {
+        margin-bottom: 28px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .flow__text_margin {
+        margin-bottom: 62px;
+    }
+
+    .flow__ol {
+        display: flex;
+        padding-left: 0;
+    }
+
+    .flow__ol li {
+        max-width: none;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 0;
+        padding: 8px 15px 4px 28px;
+        border-left: 1px solid #494949;
+    }
+
+    .flow__ol li:first-child {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .flow__ol li:last-child {
+        min-width: 148px;
+        padding-left: 22px;
+        padding-right: 0;
+    }
+
+    .settings {
+        padding: 70px 65px 70px 64px;
+    }
+
+    .settings__heading {
+        margin-bottom: 30px;
+    }
+
+    .settings__text {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 54px;
+    }
+
+    .settings .carousel {
+        margin-bottom: 148px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .settings .carousel-indicators [data-bs-target] {
+        width: 25px;
+        height: 25px;
+    }
+
+    .settings .carousel-indicators {
+        width: 275px;
+        bottom: -95px;
+    }
+
+    .settings__apps {
+        padding-top: 38px;
+        padding-bottom: 29px;
+    }
+
+    .settings__apps-text {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .settings__apps img {
+        width: 512px;
+        margin-bottom: 25px;
+        padding-left: 1px;
+        padding-right: 0;
+    }
+
+    .comfort__heading {
+        margin-bottom: 30px;
+    }
+
+    .comfort__text {
+        margin-bottom: 50px;
+        padding-left: 67px;
+        padding-right: 65px;
+    }
+
+    .comfort__img {
+        width: 100%;
+    }
+
+    .footer {
+        padding-top: 47px;
+        padding-bottom: 71px;
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
