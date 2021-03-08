@@ -940,6 +940,8 @@ img {
     .bluetooth {
         padding-top: 45px;
         padding-bottom: 48px;
+        padding-left: calc(50% - 622px);
+        padding-right: calc(50% - 622px);
     }
 
     .bluetooth__icon {
@@ -983,6 +985,8 @@ img {
     .texture {
         padding-top: 70px;
         padding-bottom: 70px;
+        padding-left: calc(50% - 640px);
+        padding-right: calc(50% - 640px);
     }
 
     .texture__heading {
@@ -1146,11 +1150,6 @@ img {
     .comfort__speed .comfort__heading,
     .comfort__speed p {
         text-align: right;
-    }
-
-    .content-center_1245px {
-        padding-left: calc(50% - 622px);
-        padding-right: calc(50% - 622px);
     }
 }
 
