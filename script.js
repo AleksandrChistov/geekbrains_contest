@@ -1,8 +1,10 @@
 const navbarTogglerElement = document.querySelector('.navbar-toggler');
 const topLogoElement = document.querySelector('.navbar-brand');
 const headerElement = document.querySelector('.top__header');
-const navbarNavElement = document.querySelector('.navbar-nav_mobile');
-let navItemActiveElement = document.querySelector('.navbar-nav_mobile .nav-item.active');
+const navbarNavMobileElement = document.querySelector('.navbar-nav_mobile');
+const navbarNavDesktopElement = document.querySelector('.navbar-nav_desktop');
+let navItemActiveMobileElement = document.querySelector('.navbar-nav_mobile .nav-item.active');
+let navItemActiveDesktopElement = document.querySelector('.navbar-nav_desktop .nav-item.active');
 
 navbarTogglerElement.addEventListener('click', () => {
     navbarTogglerElement.classList.toggle('navbar-toggler_active');
@@ -10,11 +12,21 @@ navbarTogglerElement.addEventListener('click', () => {
     headerElement.classList.toggle('top__header_dark');
 })
 
-navbarNavElement.addEventListener('click', (event) => {
+navbarNavMobileElement.addEventListener('click', (event) => {
     if (event.target !== event.currentTarget) {
-        navItemActiveElement.classList.remove('active');
+        navItemActiveMobileElement.classList.remove('active');
         const currentNavItemElement = event.target.closest('.nav-item');
-        navItemActiveElement = currentNavItemElement;
-        navItemActiveElement.classList.add('active');
+        navItemActiveMobileElement = currentNavItemElement;
+        navItemActiveMobileElement.classList.add('active');
+    }
+})
+
+navbarNavDesktopElement.addEventListener('click', (event) => {
+    debugger
+    if(event.target.classList.value === 'nav-link') {
+        navItemActiveDesktopElement.classList.remove('active');
+        const currentNavItemElement = event.target.parentElement;
+        navItemActiveDesktopElement = currentNavItemElement;
+        navItemActiveDesktopElement.classList.add('active');
     }
 })
