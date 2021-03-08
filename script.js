@@ -22,7 +22,6 @@ navbarNavMobileElement.addEventListener('click', (event) => {
 })
 
 navbarNavDesktopElement.addEventListener('click', (event) => {
-    debugger
     if(event.target.classList.value === 'nav-link') {
         navItemActiveDesktopElement.classList.remove('active');
         const currentNavItemElement = event.target.parentElement;
