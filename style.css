@@ -838,7 +838,7 @@ img {
         line-height: 42px;
     }
 
-    .content-center {
+    .text-content-center {
         padding-left: 0;
         padding-right: 0;
         margin-left: auto;
@@ -933,16 +933,13 @@ img {
     }
 
     .top__text {
-        padding-left: 0;
-        padding-right: 0;
+        max-width: 685px;
         margin-bottom: 49px;
     }
 
     .bluetooth {
         padding-top: 45px;
         padding-bottom: 48px;
-        padding-left: calc(50% - 622px);
-        padding-right: calc(50% - 622px);
     }
 
     .bluetooth__icon {
@@ -1054,7 +1051,10 @@ img {
     }
 
     .settings {
-        padding: 70px 55px 71px 54px;
+        padding-top: 70px;
+        padding-bottom: 71px;
+        padding-left: calc(50% - 580px);
+        padding-right: calc(50% - 580px);
     }
 
     .settings__heading {
@@ -1082,6 +1082,8 @@ img {
 
     .comfort {
         padding-top: 0;
+        padding-left: calc(50% - 640px);
+        padding-right: calc(50% - 640px);
     }
 
     .comfort__design {
@@ -1144,5 +1146,59 @@ img {
     .comfort__speed .comfort__heading,
     .comfort__speed p {
         text-align: right;
+    }
+
+    .content-center_1245px {
+        padding-left: calc(50% - 622px);
+        padding-right: calc(50% - 622px);
+    }
+}
+
+@media (min-width: 1920px) {
+    .top {
+        padding-bottom: 80px;
+    }
+
+    .top__img {
+        margin-top: 20px;
+    }
+
+    .bluetooth {
+        padding-top: 80px;
+        padding-bottom: 69px;
+    }
+
+    .bluetooth__icon {
+        margin-bottom: 35px;
+    }
+
+    .texture {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .flow {
+        padding-top: 100px;
+        padding-bottom: 870px;
+    }
+
+    .flow__text_margin {
+        margin-bottom: 69px;
+    }
+
+    .settings {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .comfort {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: calc(50% - 654px);
+        padding-right: calc(50% - 654px);
+    }
+
+    .comfort__img {
+        width: 654px;
     }
 }
