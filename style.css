@@ -110,21 +110,21 @@ img {
     justify-content: center;
 }
 
-.top .navbar-nav {
+.top .navbar-nav_mobile {
     align-items: center;
     margin-top: 148px;
     margin-bottom: 208px;
 }
 
-.top .navbar-nav .nav-item {
+.top .navbar-nav_mobile .nav-item {
     margin-bottom: 32px;
 }
 
-.top .navbar-nav .nav-item:last-child {
+.top .navbar-nav_mobile .nav-item:last-child {
     margin-bottom: 0;
 }
 
-.top .navbar-nav .nav-link {
+.top .navbar-nav_mobile .nav-link {
     padding-top: 0;
     padding-bottom: 0;
     font-weight: 900;
@@ -132,6 +132,11 @@ img {
     line-height: 23px;
     color: #C4C4C4;
     text-align: center;
+}
+
+.top .navbar-nav .nav-item.active .nav-link {
+    position: relative;
+    color: #ffffff;
 }
 
 .top .navbar-nav .nav-link::after {
@@ -144,15 +149,19 @@ img {
     background-color: #ffffff;
 }
 
-.top .navbar-nav .nav-item.active .nav-link {
-    position: relative;
-    color: #ffffff;
-}
-
 .top .navbar-nav .nav-item.active .nav-link::after {
     width: 100%;
     transition-property: width;
     transition-duration: 0.5s;
+}
+
+.top .navbar-nav .nav-link:focus,
+.top .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar-nav_desktop {
+    display: none;
 }
 
 .top__img {
@@ -347,8 +356,9 @@ img {
 
 .flow {
     padding-top: 70px;
-    padding-bottom: 218px;
+    padding-bottom: 58%;
     background-image: url(img/high-resolution-jpg-mx-lifestyle-2346-1.jpg);
+    background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: #EDEDED;
@@ -439,6 +449,10 @@ img {
     margin-right: auto;
 }
 
+.settings__main-img {
+    display: none;
+}
+
 .settings__apps {
     background-color: #C4C4C4;
     padding-top: 23px;
@@ -447,12 +461,11 @@ img {
 }
 
 .settings__apps img {
-    width: 324px;
+    width: 375px;
     max-width: 100%;
     padding-left: 29px;
     padding-right: 22px;
     margin-bottom: 20px;
-    box-sizing: content-box;
 }
 
 .settings__apps-text {
@@ -483,8 +496,16 @@ img {
     text-align: center;
 }
 
+.comfort__text p {
+    margin-bottom: 0;
+}
+
 .comfort__speed {
     text-align: center;
+}
+
+.comfort__img {
+    width: 100%;
 }
 
 .footer {
@@ -502,6 +523,11 @@ img {
     body {
         font-size: 24px;
         line-height: 28px;
+    }
+
+    .heading {
+        font-size: 40px;
+        line-height: 47px;
     }
 
     .top {
@@ -537,16 +563,6 @@ img {
         height: 72px;
     }
 
-    .top__logo_dark,
-    .top__logo_white {
-        min-width: 100%;
-    }
-
-    .heading {
-        font-size: 40px;
-        line-height: 47px;
-    }
-
     .top__img {
         height: 514px;
         background-image: url(img/tablet/mx-master_1.png);
@@ -565,21 +581,21 @@ img {
         height: 29px;
     }
 
-    .top .navbar-nav {
+    .top .navbar-nav_mobile {
         margin-top: 124px;
         margin-bottom: 141px;
     }
 
-    .top .navbar-nav .nav-link {
+    .top .navbar-nav_mobile .nav-link {
         font-size: 40px;
         line-height: 47px;
     }
 
-    .top .navbar-nav .nav-link::after {
+    .top .navbar-nav_mobile .nav-link::after {
         height: 4px;
     }
 
-    .top .navbar-nav .nav-item {
+    .top .navbar-nav_mobile .nav-item {
         margin-bottom: 59px;
     }
 
@@ -703,7 +719,7 @@ img {
     .flow {
         padding-left: 64px;
         padding-right: 65px;
-        padding-bottom: 498px;
+        padding-bottom: 56%;
         background-image: url(img/tablet/high-resolution-jpg-mx-lifestyle-2346-1.jpg);
     }
 
@@ -787,7 +803,7 @@ img {
     }
 
     .settings__apps img {
-        width: 512px;
+        width: 513px;
         margin-bottom: 25px;
         padding-left: 1px;
         padding-right: 0;
@@ -803,14 +819,330 @@ img {
         padding-right: 65px;
     }
 
-    .comfort__img {
-        width: 100%;
-    }
-
     .footer {
         padding-top: 47px;
         padding-bottom: 71px;
         font-size: 14px;
         line-height: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .heading {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .content-center {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top {
+        padding-bottom: 56px;
+    }
+
+    .top__header {
+        height: 100px;
+        padding-top: 0;
+        background: #2F3132;
+    }
+
+    .top .navbar-brand {
+        width: auto;
+        height: auto;
+        flex-grow: 1;
+    }
+
+    .top__logo_white {
+        display: block;
+        padding-left: 20px;
+    }
+
+    .top__logo_dark {
+        display: none;
+    }
+
+    .top .navbar-expand-lg {
+        width: 100%;
+        max-width: 1200px;
+        flex-wrap: wrap;
+    }
+
+    .top .navbar-expand-lg .navbar-collapse {
+        flex-grow: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .top .container-fluid {
+        justify-content: center;
+    }
+
+    .top .navbar-nav_mobile {
+        display: none;
+    }
+
+    .top .navbar-nav_desktop {
+        display: flex;
+    }
+
+    .top .navbar-nav_desktop .nav-link {
+        padding: 0;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+    .top .navbar-nav_desktop .nav-item {
+        padding: 8px 21px 8px 22px;
+        border-left: 1px solid #494949;
+    }
+
+    .top .navbar-nav_desktop .nav-item:first-child {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .top .navbar-nav_desktop .nav-item:last-child {
+        padding-right: 0;
+    }
+
+    .top .navbar-nav_desktop .nav-link::after {
+        bottom: -7px;
+        height: 1px;
+    }
+
+    .top__img {
+        height: 671px;
+        background-image: url(img/desktop/mx-master_1.png);
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .top__heading {
+        padding-top: 80px;
+    }
+
+    .top__text {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 49px;
+    }
+
+    .bluetooth {
+        padding-top: 45px;
+        padding-bottom: 48px;
+        padding-left: calc(50% - 622px);
+        padding-right: calc(50% - 622px);
+    }
+
+    .bluetooth__icon {
+        margin-bottom: 40px;
+    }
+
+    .bluetooth__heading {
+        margin-bottom: 35px;
+    }
+
+    .bluetooth__text {
+        max-width: 761px;
+        margin-bottom: 14px;
+    }
+
+    .bluetooth__days {
+        height: 426px;
+        display: flex;
+        justify-content: center;
+        font-size: 96px;
+        line-height: 112px;
+        margin-bottom: 0;
+        background: url(img/desktop/high-resolution-png-mx-master-3-front-graphite-1.png) left 119px no-repeat,
+            url(img/desktop/high-resolution-png-mx-master-3-front-left-graphite-1.png) right bottom no-repeat;
+    }
+
+    .bluetooth__days-count {
+        font-size: 300px;
+        line-height: 352px;
+        padding-left: 80px;
+    }
+
+    .bluetooth__days-text {
+        margin-top: 45px;
+    }
+
+    .bluetooth__img {
+        display: none;
+    }
+
+    .texture {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .texture__heading {
+        margin-bottom: 35px;
+    }
+
+    .texture__text,
+    .texture__carousel-text {
+        max-width: 765px;
+    }
+
+    .texture__advantages-item {
+        flex-basis: 237px;
+        min-height: 140px;
+    }
+
+    .texture .carousel {
+        margin-bottom: 39px;
+    }
+
+    .texture .carousel-indicators {
+        min-width: 321px;
+        bottom: -123px;
+    }
+
+    .texture__carousel-buttons {
+        bottom: -101px;
+    }
+
+    .texture__carousel-heading {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 91px;
+    }
+
+    .flow {
+        padding: 70px 0 51% 0;
+        background-image: url(img/desktop/high-resolution-jpg-mx-lifestyle-2346-1.jpg);
+    }
+
+    .flow__heading {
+        margin-bottom: 35px;
+    }
+
+    .flow__text {
+        max-width: 958px;
+    }
+
+    .flow__text_margin {
+        margin-bottom: 66px;
+    }
+
+    .flow__ol {
+        max-width: 945px;
+    }
+
+    .flow__ol li {
+        padding: 8px 27px 8px 73px;
+        min-width: 310px;
+        box-sizing: content-box;
+    }
+
+    .flow__ol li:last-child {
+        padding-left: 58px;
+        min-width: 155px;
+    }
+
+    .settings {
+        padding: 70px 55px 71px 54px;
+    }
+
+    .settings__heading {
+        margin-bottom: 38px;
+    }
+
+    .settings__text {
+        max-width: 958px;
+    }
+
+    .carousel_hidden {
+        display: none;
+    }
+
+    .settings__main-img {
+        display: block;
+    }
+
+    .settings__apps {
+        width: 749px;
+        margin-top: -58px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .comfort {
+        padding-top: 0;
+    }
+
+    .comfort__design {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .comfort__speed {
+        display: flex;
+        align-items: center;
+    }
+
+    .comfort__img {
+        width: 640px;
+    }
+
+    .comfort__text {
+        width: 50%;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comfort__heading,
+    .comfort__text p {
+        max-width: 400px;
+    }
+
+    .comfort__wrap-img {
+        width: 50%;
+    }
+
+    .comfort__heading {
+        margin-bottom: 28px;
+    }
+
+    .comfort__speed .comfort__heading {
+        margin-bottom: 34px;
+    }
+
+    .comfort__design .comfort__text {
+        align-items: flex-start;
+        padding-left: 32px;
+    }
+
+    .comfort__speed .comfort__text {
+        align-items: flex-end;
+        padding-right: 32px;
+    }
+
+    .comfort__design .comfort__heading,
+    .comfort__design p {
+        text-align: left;
+    }
+
+    .comfort__speed .comfort__heading,
+    .comfort__speed p {
+        text-align: right;
     }
 }

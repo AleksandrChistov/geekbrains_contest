@@ -21,6 +21,7 @@
                       <img class="top__logo_dark" src="img/logo-logitech_dark.png" alt="Dark logo - Logitech">
                     </picture>
                     <picture>
+                      <source srcset="img/desktop/logo-logitech_white.png" media="(min-width: 992px)">
                       <source srcset="img/tablet/logo-logitech_white.png" media="(min-width: 768px)">
                       <img class="top__logo_white" src="img/logo-logitech_white.png" alt="White logo - Logitech">
                     </picture>
@@ -31,7 +32,7 @@
                     <span class="navbar-toggler__item"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav navbar-nav_mobile">
                       <li class="nav-item">
                         <a class="nav-link" href="#">БЕЗ ПРОВОДОВ</a>
                       </li>
@@ -51,12 +52,32 @@
                         <a class="nav-link" href="#">КОМФОРТНО.<br>ЭРГОНОМИЧНО. ИНТУИТИВНО.</a>
                       </li>
                     </ul>
+                    <ul class="navbar-nav navbar-nav_desktop">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">РАБОТАЙТЕ БЕЗ ПРОВОДОВ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">ГДЕ УГОДНО</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">С КОМФОРТОМ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">С РАЗНЫХ УСТРОЙСТВ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">В ЛЮБОЕ ВРЕМЯ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">И ЕЩЕ БЫСТРЕЕ</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </nav>
         </header>
         <div class="top__img">
-            <h2 class="heading">РАБОТАЙТЕ ПРОДУКТИВНЕЕ</h2>
+            <h2 class="heading top__heading">РАБОТАЙТЕ ПРОДУКТИВНЕЕ</h2>
         </div>
         <p class="top__text">
             Создана для эффективной работы, программирования и творчества
@@ -70,10 +91,12 @@
     <section class="bluetooth" id="bluetooth">
         <img class="bluetooth__icon" src="img/icon-bluetooth.svg" alt="Bluetooth icon">
         <h2 class="heading bluetooth__heading">БЕЗ ПРОВОДОВ</h2>
-        <p class="bluetooth__text">
+        <p class="bluetooth__text content-center">
             Беспроводная мышь MX Master 3 работает без проводов до нескольких месяцев. Вы закроете приоритетные задачи прежде, чем понадобится подзарядка.
         </p>
-        <h3 class="bluetooth__days"><span>70</span> <span>дней</span></h3>
+        <h3 class="bluetooth__days">
+          <span class="bluetooth__days-count">70</span> <span class="bluetooth__days-text">дней</span>
+        </h3>
         <picture>
           <source srcset="img/tablet/high-resolution-png-mx-master-3-left-graphite-1.png" media="(min-width: 768px)">
           <img class="bluetooth__img" src="img/high-resolution-png-mx-master-3-left-graphite-1.png" alt="MX Master 3 - left graphite">
@@ -81,7 +104,7 @@
     </section>
     <section class="texture">
         <h2 class="heading texture__heading">ЗА ЛЮБЫМ СТОЛОМ</h2>
-        <p class="texture__text">
+        <p class="texture__text content-center">
             Исследуйте ландшафты своего дома, не отвлекаясь от работы. 
             MX&nbsp;Master 3 достаточно компактная, чтобы сменить рабочее место и перенестись с ноутбуком на кухню.
         </p>
@@ -106,30 +129,35 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <picture>
+                  <source srcset="img/desktop/wood.jpg" media="(min-width: 992px)">
                   <source srcset="img/tablet/wood.jpg" media="(min-width: 768px)">
                   <img src="img/wood.jpg" class="d-block w-100" alt="Mouse on wood texture">
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
+                  <source srcset="img/desktop/glass.jpg" media="(min-width: 992px)">
                   <source srcset="img/tablet/glass.jpg" media="(min-width: 768px)">
                   <img src="img/glass.jpg" class="d-block w-100" alt="Mouse on glass texture">
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
+                  <source srcset="img/desktop/linoleum.jpg" media="(min-width: 992px)">
                   <source srcset="img/tablet/linoleum.jpg" media="(min-width: 768px)">
                   <img src="img/linoleum.jpg" class="d-block w-100" alt="Mouse on linoleum texture">
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
+                  <source srcset="img/desktop/cloth.jpg" media="(min-width: 992px)">
                   <source srcset="img/tablet/cloth.jpg" media="(min-width: 768px)">
                   <img src="img/cloth.jpg" class="d-block w-100" alt="Mouse on cloth texture">
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
+                  <source srcset="img/desktop/marble.jpg" media="(min-width: 992px)">
                   <source srcset="img/tablet/marble.jpg" media="(min-width: 768px)">
                   <img src="img/marble.jpg" class="d-block w-100" alt="Mouse on marble texture">
                 </picture>
@@ -147,24 +175,24 @@
             </div>
         </div>
         <h3 class="texture__carousel-heading">Переключите поверхность</h3>
-        <p class="texture__carousel-text">
+        <p class="texture__carousel-text content-center">
             Благодаря технологии Logitech Darkfierd, 
             MX&nbsp;Master 3 работает на любой поверхности, даже на стекле.
         </p>
     </section>
     <section class="flow">
         <h2 class="heading flow__heading">ОДНОВРЕМЕННО С НЕСКОЛЬКИХ УСТРОЙСТВ</h2>
-        <p class="flow__text">
+        <p class="flow__text content-center">
             С технологией Flow вы сможете работать одновременно на нескольких компьютерах, мгновенно
 переключаясь между разными операционными системами — даже между Windows® и&nbsp;macOS.
 Например, достаточно скопировать текст, изображение или файл на MacBook и переместить его
 на Windows PC без задержек.
         </p>
-        <p class="flow__text flow__text_margin">
+        <p class="flow__text flow__text_margin content-center">
             Клавиатура MX Keys отслеживает перемещение курсора мыши MX&nbsp;Master 3, благодаря чему ваш
 текст появится там, где вы работаете в текущий момент.
         </p>
-        <ol class="flow__ol">
+        <ol class="flow__ol content-center">
             <li>Нажмите и удерживайте папку, чтобы переместить её</li>
             <li>Перенесите папку на любой из соседних экранов</li>
             <li>Да, всё&nbsp;так просто!</li>
@@ -172,12 +200,12 @@
     </section>
     <section class="settings">
         <h2 class="heading settings__heading">С ИНДИВИДУАЛЬНЫМИ НАСТРОЙКАМИ</h2>
-        <p class="settings__text">
+        <p class="settings__text content-center">
             Мышь MX Master 3 адаптируется под ваши рабочие процессы. Благодаря
-индивидуальным настройкам, вы сможете настроить кнопки и жесты практически
-под любое используемое приложение.
+индивидуальным&nbsp;настройкам, вы сможете настроить кнопки и жесты практически
+под&nbsp;любое&nbsp;используемое&nbsp;приложение.
         </p>
-        <div id="carouselSettings" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselSettings" class="carousel carousel_hidden slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselSettings" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselSettings" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -225,8 +253,9 @@
               </div>
             </div>
         </div>
+        <img class="settings__main-img" src="img/desktop/functions_744aa55-1.png" alt="MX Master 3 - functions">
         <div class="settings__apps">
-            <img src="img/icons-apps-sprite.png" alt="MX Master 3 - supported apps" class="setting__apps-pictures">
+            <img src="img/icons-apps-sprite.png" alt="MX Master 3 - supported apps">
             <p class="settings__apps-text">
                 Начните работать продуктивнее с момента покупки — устройство
 предварительно оптимизировано под популярные приложения
@@ -243,7 +272,8 @@
         и&nbsp;расположение кнопок жестов, с&nbsp;которыми вы будете творить уверенно как никогда.
                 </p>
             </div>
-            <picture>
+            <picture class="comfort__wrap-img">
+              <source srcset="img/desktop/high-resolution_jpg-mx-master-lifestyle-2602-space-grey-for-MAC-2.jpg" media="(min-width: 992px)">
               <source srcset="img/tablet/high-resolution_jpg-mx-master-lifestyle-2602-space-grey-for-MAC-2.jpg" media="(min-width: 768px)">
               <img class="comfort__img" src="img/high-resolution_jpg-mx-master-lifestyle-2602-space-grey-for-MAC-2.jpg" alt="MX Master 3 - comfortable use">
             </picture>
@@ -252,12 +282,13 @@
             <div class="comfort__text">
                 <h2 class="heading comfort__heading">БЫСТРЕЕ,<br>ЧЕМ КОГДА-ЛИБО</h2>
                 <p>
-                    Компьютерная мышь MX Master 3 предлагает ультимативный механизм прокрутки
-со&nbsp;скоростью 1000 строк за 1 секунду.
-С&nbsp;точностью до пикселя. Бесшумно.
+                    Компьютерная мышь MX Master 3 предлагает ультимативный механизм&nbsp;прокрутки
+со&nbsp;скоростью 1000&nbsp;строк&nbsp;за&nbsp;1&nbsp;секунду.
+С&nbsp;точностью&nbsp;до&nbsp;пикселя.&nbsp;Бесшумно.
                 </p>
             </div>
-            <picture>
+            <picture class="comfort__wrap-img">
+              <source srcset="img/desktop/mouse-gradient_image-2.jpg" media="(min-width: 992px)">
               <source srcset="img/tablet/mouse-gradient_image-2.jpg" media="(min-width: 768px)">
               <img class="comfort__img" src="img/mouse-gradient_image-2.jpg" alt="MX Master 3 - design">
             </picture>

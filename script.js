@@ -1,8 +1,8 @@
 const navbarTogglerElement = document.querySelector('.navbar-toggler');
 const topLogoElement = document.querySelector('.navbar-brand');
 const headerElement = document.querySelector('.top__header');
-const navbarNavElement = document.querySelector('.navbar-nav');
-let navItemActiveElement = document.querySelector('.nav-item.active');
+const navbarNavElement = document.querySelector('.navbar-nav_mobile');
+let navItemActiveElement = document.querySelector('.navbar-nav_mobile .nav-item.active');
 
 navbarTogglerElement.addEventListener('click', () => {
     navbarTogglerElement.classList.toggle('navbar-toggler_active');
